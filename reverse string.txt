@@ -1,0 +1,71 @@
+import java.io.*;
+import java.util.Scanner;
+
+
+class Main
+{
+	public static void main(String args[])
+	{
+                
+
+		
+		System.out.println("Enter the string");
+		String s;
+		Scanner sc = new Scanner(System.in);
+	 	s=sc.nextLine();
+		char[] str = s.toCharArray();
+    		
+          String result="";
+          for(int i= str.length-1;i>=0;i--){
+              int k=i;
+              while (i>=0&&str[i]!=' ')
+              {
+                  i--;
+              }
+              int j=i+1;
+              while(j<=k)
+              {
+                  result=result+str[j];
+                  j++;
+              }
+          
+    		result=result+" ";
+	}
+    System.out.println(result);		
+	}    
+}import java.io.*;
+import java.util.Scanner;
+
+
+class Main
+{
+	public static void main(String args[])
+	{
+                
+
+		
+		System.out.println("Enter the string");
+		String s;
+		Scanner sc = new Scanner(System.in);
+	 	s=sc.nextLine();
+		char[] str = s.toCharArray();
+    		
+          String result="";
+          for(int i= str.length-1;i>=0;i--){
+              int k=i;
+              while (i>=0&&str[i]!=' ')
+              {
+                  i--;
+              }
+              int j=i+1;
+              while(j<=k)
+              {
+                  result=result+str[j];
+                  j++;
+              }
+          
+    		result=result+" ";
+	}
+    System.out.println(result);		
+	}    
+}
