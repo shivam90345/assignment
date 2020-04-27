@@ -1,0 +1,56 @@
+
+package cd;
+
+import java.util.ArrayList;
+
+
+public class Cd {
+
+    
+    
+           int id;
+String name;
+int balance;
+    Cd(int id, String name,int balance){
+        this.id=id;
+        this.name=name;
+        this.balance=balance;
+    }
+    
+    public static void main(String[] args) {
+       
+     Cd c1= new Cd(1,"a",100);
+    Cd c2= new Cd(2,"b",500);
+      Cd c3= new Cd(3,"c",2100);
+    Cd c4= new Cd(4,"d",90);
+      Cd c5= new Cd(5,"e",80);
+    Cd c6= new Cd(6,"f",2500);
+       Cd c7= new Cd(7,"g",85000);
+    Cd c8= new Cd(8,"h",70);
+       Cd c9= new Cd(9,"i",10);
+    Cd c10= new Cd(10,"j",2800);
+    
+    ArrayList<Cd> details=new ArrayList<>();
+    
+    details.add(c1);
+    details.add(c2);
+    details.add(c3);
+    details.add(c4);
+    details.add(c5);
+    details.add(c6);
+    details.add(c7);
+    details.add(c8);
+    details.add(c9);
+    details.add(c10);
+    
+    details.forEach(Cd->{
+        if(Cd.balance<100){
+            System.out.println("id:"+Cd.id+"name:"+Cd.name+"balance:"+Cd.balance);
+        }
+    });     
+    }
+}
+        
+    
+    
+

@@ -1,0 +1,36 @@
+import java.io.*;
+import java.util.Scanner;
+class Main{
+  
+    public static String s(String a, int i, int j) {  
+        char[] b =a.toCharArray();  
+        char ch;  
+        ch = b[i];  
+        b[i] = b[j];  
+        b[j] = ch;  
+        return String.valueOf(b);  
+    }  
+      
+    public static void main(String[] args)  
+    {  
+        String str = "GOD";  
+        int len = str.length();  
+        System.out.println("All the permutations of the string are: ");  
+    Permutation(str, 0, len);  
+    }  
+      
+    public static void Permutation(String str, int st, int fi)  
+    {  
+        if (st == fi-1)  
+            System.out.println(str);  
+        else  
+        {  
+            for (int i = st; i < fi; i++)  
+            {  
+                str = s(str,st,i);  
+               Permutation(str,st+1,fi);  
+                str = s(str,st,i);  
+            }  
+        }  
+    }  
+}  

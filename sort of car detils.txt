@@ -1,0 +1,62 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
+ class Car {
+            String make;
+            String model;
+             int year;
+            String ln;
+    
+Car(String make,String model,int year,String ln){
+    this.make = make;
+    this.model=model;
+    this.year=year;
+    this.ln=ln;
+}
+            @Override 
+            public String toString() 
+    { 
+        return this.make + " " + this.model + " "  + this.year+  " " +this.ln;
+    } 
+ } 
+  
+class Sortbyyear implements Comparator<Car> 
+{ 
+    
+    @Override
+    public int compare(Car a, Car b) 
+    { 
+        return a.year - b.year; 
+    } 
+
+
+ 
+	public static void main(String[] args)  {
+
+            Car c1=new Car("dodge","neon",1996,"G74-LLC");
+            Car c2=new Car("ford","mustang",1966,"AZUCAR");
+            Car c3=new Car("toyota","carmy",1985,"622-VRX");
+            Car c4=new Car("cevrolet","chevette",1980,"J43-SMB");
+            Car c5=new Car("toyota","carmy",1985,"622-VRX");
+            
+            
+            
+		ArrayList<Car>details=new ArrayList<Car>();
+                details.add(c1);
+                details.add(c2);
+                details.add(c3);
+                details.add(c4);
+                details.add(c5);
+
+  Collections.sort(details, new Sortbyyear()); 
+ 
+            details.forEach(Car->{    
+                
+		System.out.println(Car.make + " " + Car.model + " "  + Car.year+  " " +Car.ln);
+            });
+        }          
+}    
+
+
+    
