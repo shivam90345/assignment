@@ -1,0 +1,32 @@
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+ class Car {
+           
+   public static void main(String[] args) throws Exception  {
+Scanner sc = new Scanner(System.in);
+System.out.println("enter the file name whom you want to read");
+String s=sc.nextLine();
+   
+            ArrayList car = new ArrayList();
+ 
+		FileReader fr = new FileReader("E:\\HTML5 and CSS3\\cr\\"+ s);
+		BufferedReader br = new BufferedReader(fr); 
+
+		String line;
+
+		br.readLine();
+                
+              while((line=br.readLine())!=null){
+                    car.add(line);
+                }
+              Collections.sort(car);
+                 System.out.println(car);
+                 
+                 
+   }
+ }
